@@ -1,0 +1,27 @@
+<div class="productCompleteView">
+  <div class="product">
+    <div class="product__information">
+      <p class="product__name">{{ product.name }}</p>
+      <p class="product__price">{{ product.price }}</p>
+      <p class="product__description">
+        {{ product.description }}
+      </p>
+      <p>
+        In stock:
+        {{
+          product.stock === 0
+            ? "No available"
+            : product.stock === 1
+            ? "1 unit"
+            : product.stock + " units"
+        }}
+      </p>
+      <p>Seller : {{ "Megan Rotthen" }}</p>
+    </div>
+    <img
+      class="product__image"
+      src="{{ product.imageLink }}"
+      alt="product image"
+    />
+  </div>
+</div>

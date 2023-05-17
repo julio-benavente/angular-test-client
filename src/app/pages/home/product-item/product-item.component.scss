@@ -1,0 +1,43 @@
+.product {
+  display: grid;
+  column-gap: 8px;
+  row-gap: 8px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name price"
+    "description price"
+    "seeMore price";
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+
+  .product__name {
+    grid-area: name;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .product__price {
+    grid-area: price;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .product__seeMore {
+    grid-area: seeMore;
+    all: unset;
+    position: relative;
+    justify-self: start;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: #000;
+    }
+  }
+}

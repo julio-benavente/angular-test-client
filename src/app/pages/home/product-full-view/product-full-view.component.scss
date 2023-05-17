@@ -1,0 +1,58 @@
+.productCompleteView {
+  > .product {
+    display: grid;
+    width: 600px;
+    height: 400px;
+    column-gap: 8px;
+    row-gap: 8px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "information image";
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    .product__close {
+      all: unset;
+      grid-area: close;
+      justify-self: end;
+      padding: 0px 8px;
+      line-height: 0;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      border: 1px solid black;
+    }
+
+    .product__information {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 8px;
+      grid-area: information;
+      align-content: start;
+
+      .product__name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .product__description {
+      }
+
+      .product__price {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .product__link {
+      }
+    }
+
+    .product__image {
+      grid-area: image;
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+      align-self: stretch;
+      border-radius: 8px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<main class="container">
+  <div class="header">
+    <h1>Our last products</h1>
+    <button (click)="openAddProductModal()">Add product</button>
+  </div>
+
+  <div class="products__list">
+    <app-product-item
+      *ngFor="let product of products | async"
+      [product]="product"
+    ></app-product-item>
+  </div>
+</main>
